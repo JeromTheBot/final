@@ -1,0 +1,84 @@
+{
+  "fault_risk": {
+    "target": "Fault Occurrence Rate (%)",
+    "algorithm": "HistGradientBoosting (regressor + classifier)",
+    "n_train": 80000,
+    "n_test": 20000,
+    "r2": 0.9997,
+    "mae": 0.189,
+    "baseline_mae_mean_predictor": 11.441,
+    "early_warning_r2": 0.641,
+    "early_warning_mae": 6.88,
+    "high_risk_threshold": 48.17,
+    "roc_auc": 0.9998,
+    "f1": 0.9869,
+    "accuracy": 0.9935,
+    "permutation_importance": [
+      {
+        "feature": "Critical Alarm Count",
+        "importance": 0.6361
+      },
+      {
+        "feature": "Authentication Failures",
+        "importance": 0.2214
+      },
+      {
+        "feature": "Throughput (Mbps)",
+        "importance": 0.1568
+      },
+      {
+        "feature": "Security Incidents",
+        "importance": 0.0416
+      },
+      {
+        "feature": "Successful Configuration Changes (%)",
+        "importance": 0.0007
+      },
+      {
+        "feature": "Weather",
+        "importance": 0.0002
+      },
+      {
+        "feature": "Alarm Count",
+        "importance": 0.0001
+      },
+      {
+        "feature": "Call Drop Rate (%)",
+        "importance": 0.0
+      },
+      {
+        "feature": "Packet Loss Rate (%)",
+        "importance": 0.0
+      },
+      {
+        "feature": "Parameter Changes",
+        "importance": 0.0
+      }
+    ]
+  },
+  "performance": {
+    "Throughput (Mbps)": {
+      "r2": 0.3284,
+      "mae": 161.749,
+      "baseline_mae": 197.285,
+      "n_features": 17
+    },
+    "Latency (ms)": {
+      "r2": 0.1301,
+      "mae": 28.707,
+      "baseline_mae": 30.328,
+      "n_features": 17
+    },
+    "Call Drop Rate (%)": {
+      "r2": 0.1906,
+      "mae": 0.949,
+      "baseline_mae": 1.091,
+      "n_features": 17
+    }
+  },
+  "notes": [
+    "'Issue Reported' is ~50/50 and independent of every KPI (label noise) - not used as a target.",
+    "Fault Occurrence Rate is (near-)deterministic given all KPIs (R2~1.0): the full model is used for what-if analysis; the early-warning model (no critical alarms / throughput) is the honest forecast from leading indicators.",
+    "Fault Occurrence Rate is driven mainly by Critical Alarm Count, Authentication Failures and Call Drop Rate."
+  ]
+}

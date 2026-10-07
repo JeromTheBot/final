@@ -1,0 +1,99 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/predict/performance",
+    "body": {
+      "kpis": {
+        "user_count": 9500,
+        "alarm_count": 18,
+        "signal_strength_dbm": -112,
+        "season": "Winter",
+        "weather": "Snow"
+      }
+    }
+  },
+  "status": 200,
+  "response": {
+    "forecast": {
+      "throughput_mbps": {
+        "predicted": 395.798,
+        "fleet_median": 549.212,
+        "model_r2": 0.3284,
+        "model_mae": 161.749,
+        "interval_approx": [
+          153.17,
+          638.42
+        ],
+        "drivers": [
+          {
+            "feature": "User Count",
+            "value": 9500.0,
+            "baseline": 5061.0,
+            "contribution": 47.631
+          }
+        ]
+      },
+      "latency_ms": {
+        "predicted": 112.242,
+        "fleet_median": 77.216,
+        "model_r2": 0.1301,
+        "model_mae": 28.707,
+        "interval_approx": [
+          69.18,
+          155.3
+        ],
+        "drivers": [
+          {
+            "feature": "Alarm Count",
+            "value": 18.0,
+            "baseline": 10.0,
+            "contribution": 4.297
+          },
+          {
+            "feature": "Signal Strength (dBm)",
+            "value": -112.0,
+            "baseline": -90.09,
+            "contribution": 2.579
+          },
+          {
+            "feature": "Handover Success Rate (%)",
+            "value": 95.02,
+            "baseline": 95.01,
+            "contribution": -0.257
+          }
+        ]
+      },
+      "call_drop_rate": {
+        "predicted": 2.398,
+        "fleet_median": 0.0,
+        "model_r2": 0.1906,
+        "model_mae": 0.949,
+        "interval_approx": [
+          0.97,
+          3.82
+        ],
+        "drivers": [
+          {
+            "feature": "Alarm Count",
+            "value": 18.0,
+            "baseline": 10.0,
+            "contribution": 0.248
+          },
+          {
+            "feature": "Signal Strength (dBm)",
+            "value": -112.0,
+            "baseline": -90.09,
+            "contribution": 0.22
+          },
+          {
+            "feature": "User Count",
+            "value": 9500.0,
+            "baseline": 5061.0,
+            "contribution": -0.103
+          }
+        ]
+      }
+    },
+    "note": "Forecasts use operating conditions only (load, radio, environment, config); see model_r2 for reliability."
+  }
+}

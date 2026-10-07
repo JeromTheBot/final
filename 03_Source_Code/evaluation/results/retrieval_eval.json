@@ -1,0 +1,450 @@
+{
+  "queries": [
+    {
+      "id": "R00",
+      "query": "We are seeing throughput has dropped and choppy voice and video on several cells.",
+      "conditions": [
+        "low_throughput",
+        "high_jitter"
+      ]
+    },
+    {
+      "id": "R01",
+      "query": "We are seeing weak radio signal on several cells.",
+      "conditions": [
+        "poor_signal"
+      ]
+    },
+    {
+      "id": "R02",
+      "query": "Customers complain about lost packets on the link.",
+      "conditions": [
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R03",
+      "query": "Customers complain about calls keep dropping.",
+      "conditions": [
+        "call_drops"
+      ]
+    },
+    {
+      "id": "R04",
+      "query": "We are seeing failed configuration changes on several cells.",
+      "conditions": [
+        "config_failure"
+      ]
+    },
+    {
+      "id": "R05",
+      "query": "We are seeing connection setup failing on several cells.",
+      "conditions": [
+        "setup_failure"
+      ]
+    },
+    {
+      "id": "R06",
+      "query": "slow response times plus site outages in the region - similar cases?",
+      "conditions": [
+        "high_latency",
+        "low_availability"
+      ]
+    },
+    {
+      "id": "R07",
+      "query": "Cell reports site outages, together with packet loss.",
+      "conditions": [
+        "low_availability",
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R08",
+      "query": "Customers complain about users unable to connect.",
+      "conditions": [
+        "setup_failure"
+      ]
+    },
+    {
+      "id": "R09",
+      "query": "We are seeing cells going down on several cells.",
+      "conditions": [
+        "low_availability"
+      ]
+    },
+    {
+      "id": "R10",
+      "query": "many critical alarms plus too many users on the cell in the region - similar cases?",
+      "conditions": [
+        "critical_alarms",
+        "high_load"
+      ]
+    },
+    {
+      "id": "R11",
+      "query": "Customers complain about weak radio signal, handovers between cells failing; engineers also observe calls keep dropping.",
+      "conditions": [
+        "poor_signal",
+        "handover_failure",
+        "call_drops"
+      ]
+    },
+    {
+      "id": "R12",
+      "query": "bad coverage, authentication failures for subscribers plus critical alarms firing in the region - similar cases?",
+      "conditions": [
+        "poor_signal",
+        "auth_failures",
+        "critical_alarms"
+      ]
+    },
+    {
+      "id": "R13",
+      "query": "security attacks detected plus bad coverage in the region - similar cases?",
+      "conditions": [
+        "security_incidents",
+        "poor_signal"
+      ]
+    },
+    {
+      "id": "R14",
+      "query": "Customers complain about heavy traffic congestion.",
+      "conditions": [
+        "high_load"
+      ]
+    },
+    {
+      "id": "R15",
+      "query": "We are seeing auth failure spike and bad coverage on several cells.",
+      "conditions": [
+        "auth_failures",
+        "poor_signal"
+      ]
+    },
+    {
+      "id": "R16",
+      "query": "We are seeing mobility handoff problems on several cells.",
+      "conditions": [
+        "handover_failure"
+      ]
+    },
+    {
+      "id": "R17",
+      "query": "Customers complain about auth failure spike.",
+      "conditions": [
+        "auth_failures"
+      ]
+    },
+    {
+      "id": "R18",
+      "query": "auth failure spike plus choppy voice and video in the region - similar cases?",
+      "conditions": [
+        "auth_failures",
+        "high_jitter"
+      ]
+    },
+    {
+      "id": "R19",
+      "query": "We are seeing slow download speeds and connection setup failing on several cells.",
+      "conditions": [
+        "low_throughput",
+        "setup_failure"
+      ]
+    },
+    {
+      "id": "R20",
+      "query": "security attacks detected plus handovers between cells failing in the region - similar cases?",
+      "conditions": [
+        "security_incidents",
+        "handover_failure"
+      ]
+    },
+    {
+      "id": "R21",
+      "query": "Customers complain about failed configuration changes, many critical alarms; engineers also observe lost packets on the link.",
+      "conditions": [
+        "config_failure",
+        "critical_alarms",
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R22",
+      "query": "Customers complain about config pushes failing; engineers also observe jitter is very high.",
+      "conditions": [
+        "config_failure",
+        "high_jitter"
+      ]
+    },
+    {
+      "id": "R23",
+      "query": "Cell reports calls keep dropping, slow download speeds, together with packets being dropped.",
+      "conditions": [
+        "call_drops",
+        "low_throughput",
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R24",
+      "query": "Customers complain about critical alarms firing.",
+      "conditions": [
+        "critical_alarms"
+      ]
+    },
+    {
+      "id": "R25",
+      "query": "Customers complain about large network delays; engineers also observe throughput has dropped.",
+      "conditions": [
+        "high_latency",
+        "low_throughput"
+      ]
+    },
+    {
+      "id": "R26",
+      "query": "throughput has dropped plus authentication failures for subscribers in the region - similar cases?",
+      "conditions": [
+        "low_throughput",
+        "auth_failures"
+      ]
+    },
+    {
+      "id": "R27",
+      "query": "We are seeing choppy voice and video, config pushes failing and intrusion attempts on several cells.",
+      "conditions": [
+        "high_jitter",
+        "config_failure",
+        "security_incidents"
+      ]
+    },
+    {
+      "id": "R28",
+      "query": "We are seeing lost packets on the link and calls keep dropping on several cells.",
+      "conditions": [
+        "packet_loss",
+        "call_drops"
+      ]
+    },
+    {
+      "id": "R29",
+      "query": "Cell reports users unable to connect, together with slow response times.",
+      "conditions": [
+        "setup_failure",
+        "high_latency"
+      ]
+    },
+    {
+      "id": "R30",
+      "query": "We are seeing weak radio signal on several cells.",
+      "conditions": [
+        "poor_signal"
+      ]
+    },
+    {
+      "id": "R31",
+      "query": "Customers complain about users unable to connect; engineers also observe jitter is very high.",
+      "conditions": [
+        "setup_failure",
+        "high_jitter"
+      ]
+    },
+    {
+      "id": "R32",
+      "query": "critical alarms firing plus lost packets on the link in the region - similar cases?",
+      "conditions": [
+        "critical_alarms",
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R33",
+      "query": "Customers complain about critical alarms firing, handovers between cells failing; engineers also observe packet loss.",
+      "conditions": [
+        "critical_alarms",
+        "handover_failure",
+        "packet_loss"
+      ]
+    },
+    {
+      "id": "R34",
+      "query": "Cell reports critical alarms firing, together with authentication failures for subscribers.",
+      "conditions": [
+        "critical_alarms",
+        "auth_failures"
+      ]
+    },
+    {
+      "id": "R35",
+      "query": "Customers complain about throughput has dropped; engineers also observe authentication failures for subscribers.",
+      "conditions": [
+        "low_throughput",
+        "auth_failures"
+      ]
+    },
+    {
+      "id": "R36",
+      "query": "Customers complain about auth failure spike.",
+      "conditions": [
+        "auth_failures"
+      ]
+    },
+    {
+      "id": "R37",
+      "query": "Cell reports weak radio signal, together with intrusion attempts.",
+      "conditions": [
+        "poor_signal",
+        "security_incidents"
+      ]
+    },
+    {
+      "id": "R38",
+      "query": "Cell reports intrusion attempts, together with calls keep dropping.",
+      "conditions": [
+        "security_incidents",
+        "call_drops"
+      ]
+    },
+    {
+      "id": "R39",
+      "query": "Customers complain about weak radio signal, auth failure spike; engineers also observe large network delays.",
+      "conditions": [
+        "poor_signal",
+        "auth_failures",
+        "high_latency"
+      ]
+    }
+  ],
+  "strategies": {
+    "keyword_bm25": {
+      "p@5": 0.745,
+      "ndcg@10": 0.8263,
+      "mrr@10": 0.75,
+      "symptom_recall@10": 0.8246,
+      "latency_ms_p50": 9.4
+    },
+    "semantic_dense": {
+      "p@5": 0.645,
+      "ndcg@10": 0.7988,
+      "mrr@10": 0.7304,
+      "symptom_recall@10": 0.7946,
+      "latency_ms_p50": 29.1
+    },
+    "hybrid_rrf": {
+      "p@5": 0.65,
+      "ndcg@10": 0.8022,
+      "mrr@10": 0.7471,
+      "symptom_recall@10": 0.7958,
+      "latency_ms_p50": 37.2
+    },
+    "hybrid_rrf+symptom_rerank": {
+      "p@5": 0.89,
+      "ndcg@10": 0.9345,
+      "mrr@10": 0.95,
+      "symptom_recall@10": 0.9233,
+      "latency_ms_p50": 37.6
+    },
+    "hybrid_alpha_0.3": {
+      "p@5": 0.825,
+      "ndcg@10": 0.9145,
+      "mrr@10": 0.8375,
+      "symptom_recall@10": 0.9121,
+      "latency_ms_p50": 36.7
+    },
+    "hybrid_alpha_0.5": {
+      "p@5": 0.865,
+      "ndcg@10": 0.9366,
+      "mrr@10": 0.9313,
+      "symptom_recall@10": 0.935,
+      "latency_ms_p50": 36.2
+    },
+    "hybrid_alpha_0.7": {
+      "p@5": 0.885,
+      "ndcg@10": 0.9322,
+      "mrr@10": 0.9437,
+      "symptom_recall@10": 0.9212,
+      "latency_ms_p50": 36.0
+    },
+    "hybrid_alpha_0.9": {
+      "p@5": 0.885,
+      "ndcg@10": 0.9294,
+      "mrr@10": 0.9396,
+      "symptom_recall@10": 0.9175,
+      "latency_ms_p50": 39.0
+    }
+  },
+  "embedding_models": {
+    "sentence-transformers/all-MiniLM-L6-v2": {
+      "dim": 384,
+      "encode_docs_per_s": 82.3,
+      "dense_only": {
+        "p@5": 0.55,
+        "ndcg@10": 0.735,
+        "mrr@10": 0.7052,
+        "symptom_recall@10": 0.7342,
+        "latency_ms_p50": 20.9
+      },
+      "hybrid+rerank": {
+        "p@5": 0.895,
+        "ndcg@10": 0.9453,
+        "mrr@10": 0.9452,
+        "symptom_recall@10": 0.9396,
+        "latency_ms_p50": 27.7
+      }
+    },
+    "BAAI/bge-small-en-v1.5": {
+      "dim": 384,
+      "encode_docs_per_s": 37.1,
+      "dense_only": {
+        "p@5": 0.55,
+        "ndcg@10": 0.7408,
+        "mrr@10": 0.6969,
+        "symptom_recall@10": 0.7325,
+        "latency_ms_p50": 26.4
+      },
+      "hybrid+rerank": {
+        "p@5": 0.915,
+        "ndcg@10": 0.9556,
+        "mrr@10": 0.9375,
+        "symptom_recall@10": 0.9517,
+        "latency_ms_p50": 35.3
+      }
+    },
+    "sentence-transformers/all-mpnet-base-v2": {
+      "dim": 768,
+      "encode_docs_per_s": 12.3,
+      "dense_only": {
+        "p@5": 0.495,
+        "ndcg@10": 0.7055,
+        "mrr@10": 0.6788,
+        "symptom_recall@10": 0.6883,
+        "latency_ms_p50": 46.5
+      },
+      "hybrid+rerank": {
+        "p@5": 0.865,
+        "ndcg@10": 0.9325,
+        "mrr@10": 0.9175,
+        "symptom_recall@10": 0.93,
+        "latency_ms_p50": 57.5
+      }
+    },
+    "tfidf-lsa": {
+      "dim": 256,
+      "encode_docs_per_s": 20740.2,
+      "dense_only": {
+        "p@5": 0.315,
+        "ndcg@10": 0.5027,
+        "mrr@10": 0.3849,
+        "symptom_recall@10": 0.5025,
+        "latency_ms_p50": 9.9
+      },
+      "hybrid+rerank": {
+        "p@5": 0.63,
+        "ndcg@10": 0.816,
+        "mrr@10": 0.7557,
+        "symptom_recall@10": 0.815,
+        "latency_ms_p50": 15.3
+      }
+    }
+  }
+}

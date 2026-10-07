@@ -1,0 +1,144 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/prioritize",
+    "body": {
+      "incidents": [
+        {
+          "id": "INC-1",
+          "case_id": "NOC-047966"
+        },
+        {
+          "id": "INC-2",
+          "case_id": "NOC-067096"
+        },
+        {
+          "id": "INC-3",
+          "case_id": "NOC-031050"
+        },
+        {
+          "id": "INC-LIVE",
+          "description": "Live cell report",
+          "kpis": {
+            "critical_alarm_count": 12.5,
+            "authentication_failures": 45,
+            "call_drop_rate": 5.2,
+            "user_count": 9000
+          }
+        }
+      ]
+    }
+  },
+  "status": 200,
+  "response": {
+    "ranked": [
+      {
+        "id": "INC-3",
+        "case_id": "NOC-031050",
+        "description": null,
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 94.0,
+        "predicted_fault_rate_pct": 55.45,
+        "high_risk_probability": 1.0,
+        "category": "Mobility & Handover",
+        "conditions": [
+          "call drops",
+          "handover failures",
+          "low cell availability",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high user load",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "users": 9175,
+        "rank": 1
+      },
+      {
+        "id": "INC-LIVE",
+        "case_id": null,
+        "description": "Live cell report",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 88.9,
+        "predicted_fault_rate_pct": 63.33,
+        "high_risk_probability": 1.0,
+        "category": "Mobility & Handover",
+        "conditions": [
+          "call drops",
+          "critical alarms",
+          "high user load",
+          "authentication failures"
+        ],
+        "users": 9000,
+        "rank": 2
+      },
+      {
+        "id": "INC-1",
+        "case_id": "NOC-047966",
+        "description": null,
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 87.7,
+        "predicted_fault_rate_pct": 59.22,
+        "high_risk_probability": 1.0,
+        "category": "Mobility & Handover",
+        "conditions": [
+          "packet loss",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "poor signal strength",
+          "critical alarms",
+          "connection setup failures",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "users": 6820,
+        "rank": 3
+      },
+      {
+        "id": "INC-2",
+        "case_id": "NOC-067096",
+        "description": null,
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 83.8,
+        "predicted_fault_rate_pct": 57.68,
+        "high_risk_probability": 1.0,
+        "category": "Mobility & Handover",
+        "conditions": [
+          "high latency",
+          "call drops",
+          "handover failures",
+          "high jitter",
+          "elevated alarm count",
+          "connection setup failures",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "users": 5687,
+        "rank": 4
+      }
+    ],
+    "errors": [],
+    "summary": {
+      "P1": 4,
+      "P2": 0,
+      "P3": 0,
+      "P4": 0
+    }
+  }
+}

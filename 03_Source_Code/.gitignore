@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.deepeval/
+data/raw/*.csv
+data/artifacts/*.faiss
+data/artifacts/*.joblib
+data/artifacts/*.npy
+data/artifacts/*.parquet
+data/artifacts/*.db
+!data/artifacts/.gitkeep

@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/feedback",
+    "body": {
+      "response_id": "d61285841628",
+      "rating": 5,
+      "effective_actions": [
+        "Audit ANR neighbour lists and add missing relations"
+      ],
+      "comment": "Neighbour audit fixed it"
+    }
+  },
+  "status": 200,
+  "response": {
+    "status": "recorded",
+    "feedback_id": 1
+  }
+}

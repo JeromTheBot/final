@@ -1,0 +1,93 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/metrics",
+    "body": null
+  },
+  "status": 200,
+  "response": {
+    "uptime_s": 64,
+    "total_requests": 9,
+    "total_errors": 0,
+    "status_codes": {
+      "200": 8,
+      "422": 1
+    },
+    "endpoints": {
+      "/search": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 138.4,
+        "p95_ms": 138.4,
+        "max_ms": 138.4
+      },
+      "/classify": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 457.7,
+        "p95_ms": 457.7,
+        "max_ms": 457.7
+      },
+      "/recommend": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 663.9,
+        "p95_ms": 663.9,
+        "max_ms": 663.9
+      },
+      "/analyze": {
+        "count": 2,
+        "errors": 0,
+        "p50_ms": 256.5,
+        "p95_ms": 483.8,
+        "max_ms": 509.1
+      },
+      "/prioritize": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 1126.3,
+        "p95_ms": 1126.3,
+        "max_ms": 1126.3
+      },
+      "/predict/risk": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 352.7,
+        "p95_ms": 352.7,
+        "max_ms": 352.7
+      },
+      "/predict/performance": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 192.9,
+        "p95_ms": 192.9,
+        "max_ms": 192.9
+      },
+      "/feedback": {
+        "count": 1,
+        "errors": 0,
+        "p50_ms": 31.8,
+        "p95_ms": 31.8,
+        "max_ms": 31.8
+      }
+    },
+    "events": {
+      "feedback_received": 1,
+      "guardrail_blocked": 1
+    },
+    "priorities_last_hour": {
+      "P3": 1,
+      "P1": 2
+    },
+    "alerts": [],
+    "recent_errors": [],
+    "llm": {
+      "provider": "none",
+      "model": "none",
+      "available": false,
+      "calls": 0,
+      "failures": 0,
+      "avg_latency_ms": 0
+    }
+  }
+}

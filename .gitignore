@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.*
+
+# Large data / model artifacts (use Git LFS or download separately)
+03_Source_Code/data/artifacts/*.faiss
+03_Source_Code/data/artifacts/*.joblib
+03_Source_Code/data/artifacts/*.parquet
+03_Source_Code/data/artifacts/*.npy
+03_Source_Code/data/artifacts/*.db
+03_Source_Code/data/raw/*.csv
+
+# Logs
+*.log

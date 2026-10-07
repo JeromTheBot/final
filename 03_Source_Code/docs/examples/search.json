@@ -1,0 +1,261 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/search",
+    "body": {
+      "query": "A cell is experiencing high latency, packet loss, and reduced throughput. What similar network conditions have occurred before?",
+      "filters": {
+        "season": [
+          "Winter"
+        ]
+      },
+      "top_k": 3
+    }
+  },
+  "status": 200,
+  "response": {
+    "query": "A cell is experiencing high latency, packet loss, and reduced throughput. What similar network conditions have occurred before?",
+    "understanding": {
+      "conditions": {
+        "high_latency": {
+          "label": "high latency",
+          "severity": "degraded"
+        },
+        "packet_loss": {
+          "label": "packet loss",
+          "severity": "degraded"
+        },
+        "low_throughput": {
+          "label": "reduced throughput",
+          "severity": "degraded"
+        }
+      },
+      "auto_filters_applied": {}
+    },
+    "guardrails": {
+      "checks": {
+        "length": "pass",
+        "prompt_injection": "pass",
+        "pii": "pass",
+        "domain_relevance": "pass"
+      },
+      "redactions": {}
+    },
+    "retrieval": {
+      "candidates_after_filter": 24941,
+      "mode": "hybrid",
+      "alpha": 0.6,
+      "latency_ms": 101.1,
+      "relaxed_filters": [],
+      "filters": {
+        "season": [
+          "Winter"
+        ]
+      }
+    },
+    "similar_cases": [
+      {
+        "case_id": "NOC-004223",
+        "score": 1.0,
+        "scores": {
+          "dense": 0.5372,
+          "bm25": 16.981,
+          "dense_rank": 6,
+          "bm25_rank": 29,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Stephaniebury",
+          "state": "NE",
+          "zip": "52834"
+        },
+        "season": "Winter",
+        "weather": "Rain",
+        "category": "TRANSPORT_QOS",
+        "category_name": "Transport & QoS Degradation",
+        "priority": "P3",
+        "severity": "Minor",
+        "risk_score": 56.9,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "low cell availability",
+          "connection setup failures",
+          "high data usage"
+        ],
+        "kpis": {
+          "cell_availability": 80.7,
+          "throughput_mbps": 345.733,
+          "latency_ms": 115.625,
+          "packet_loss_rate": 14.85,
+          "jitter_ms": 13.88,
+          "call_drop_rate": 0.0,
+          "handover_success_rate": 97.96,
+          "signal_strength_dbm": -103.56,
+          "connection_setup_success_rate": 91.46,
+          "alarm_count": 4.0,
+          "critical_alarm_count": 6.983,
+          "user_count": 1205.0,
+          "authentication_failures": 0.0,
+          "fault_occurrence_rate": 36.399,
+          "mttr_hours": 3.77
+        },
+        "issue_reported": "no",
+        "text": "Winter network incident at Stephaniebury, NE. Weather rain, -1\u00b0C, humidity 30%. Observed conditions: high latency (116 ms); severe packet loss (14.8%); reduced throughput (346 Mbps); low cell availability (80.7%); connection setup failures (91.5%); high data usage (42 GB). Classified as Transport & QoS Degradation, priority P3, risk 57/100. KPIs: availability 80.7%, throughput 346 Mbps, latency 116 ms, packet loss 14.8%, jitter 14 ms, call drop 0.00%, handover success 98.0%, signal -104 dBm, setup success 91.5%. Alarms 4 (critical 7.0), 1 parameter changes (97.3% successful), 1205 users, 42 GB data, 4 security incidents, 0 authentication failures. Fault occurrence 36.4%, MTTR 3.8 h. Issue reported: no."
+      },
+      {
+        "case_id": "NOC-080067",
+        "score": 0.967,
+        "scores": {
+          "dense": 0.5315,
+          "bm25": 16.981,
+          "dense_rank": 11,
+          "bm25_rank": 30,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Caseyberg",
+          "state": "MS",
+          "zip": "86342"
+        },
+        "season": "Winter",
+        "weather": "Snow",
+        "category": "TRANSPORT_QOS",
+        "category_name": "Transport & QoS Degradation",
+        "priority": "P2",
+        "severity": "Major",
+        "risk_score": 75.7,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "low cell availability",
+          "failed configuration changes",
+          "high data usage"
+        ],
+        "kpis": {
+          "cell_availability": 80.426,
+          "throughput_mbps": 382.898,
+          "latency_ms": 143.359,
+          "packet_loss_rate": 10.965,
+          "jitter_ms": 8.47,
+          "call_drop_rate": 0.0,
+          "handover_success_rate": 95.74,
+          "signal_strength_dbm": -79.85,
+          "connection_setup_success_rate": 97.09,
+          "alarm_count": 8.0,
+          "critical_alarm_count": 7.618,
+          "user_count": 6909.0,
+          "authentication_failures": 14.0,
+          "fault_occurrence_rate": 43.116,
+          "mttr_hours": 3.9
+        },
+        "issue_reported": "no",
+        "text": "Winter network incident at Caseyberg, MS. Weather snow, 2\u00b0C, humidity 58%. Observed conditions: severe high latency (143 ms); packet loss (11.0%); reduced throughput (383 Mbps); low cell availability (80.4%); severe failed configuration changes (90.3%); severe high data usage (49 GB). Classified as Transport & QoS Degradation, priority P2, risk 76/100. KPIs: availability 80.4%, throughput 383 Mbps, latency 143 ms, packet loss 11.0%, jitter 8 ms, call drop 0.00%, handover success 95.7%, signal -80 dBm, setup success 97.1%. Alarms 8 (critical 7.6), 5 parameter changes (90.3% successful), 6909 users, 49 GB data, 3 security incidents, 14 authentication failures. Fault occurrence 43.1%, MTTR 3.9 h. Issue reported: no."
+      },
+      {
+        "case_id": "NOC-075523",
+        "score": 0.964,
+        "scores": {
+          "dense": 0.5244,
+          "bm25": 17.343,
+          "dense_rank": 20,
+          "bm25_rank": 15,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Kristenview",
+          "state": "MH",
+          "zip": "21645"
+        },
+        "season": "Winter",
+        "weather": "Snow",
+        "category": "TRANSPORT_QOS",
+        "category_name": "Transport & QoS Degradation",
+        "priority": "P2",
+        "severity": "Major",
+        "risk_score": 72.4,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "low cell availability",
+          "high data usage",
+          "security incidents"
+        ],
+        "kpis": {
+          "cell_availability": 82.58,
+          "throughput_mbps": 342.2,
+          "latency_ms": 165.104,
+          "packet_loss_rate": 9.52,
+          "jitter_ms": 31.58,
+          "call_drop_rate": 0.032,
+          "handover_success_rate": 96.42,
+          "signal_strength_dbm": -95.59,
+          "connection_setup_success_rate": 96.79,
+          "alarm_count": 5.0,
+          "critical_alarm_count": 7.784,
+          "user_count": 2644.0,
+          "authentication_failures": 0.0,
+          "fault_occurrence_rate": 44.434,
+          "mttr_hours": 1.99
+        },
+        "issue_reported": "no",
+        "text": "Winter network incident at Kristenview, MH. Weather snow, 4\u00b0C, humidity 58%. Observed conditions: severe high latency (165 ms); packet loss (9.5%); reduced throughput (342 Mbps); low cell availability (82.6%); severe high data usage (48 GB); severe security incidents (19). Classified as Transport & QoS Degradation, priority P2, risk 72/100. KPIs: availability 82.6%, throughput 342 Mbps, latency 165 ms, packet loss 9.5%, jitter 32 ms, call drop 0.03%, handover success 96.4%, signal -96 dBm, setup success 96.8%. Alarms 5 (critical 7.8), 10 parameter changes (95.5% successful), 2644 users, 48 GB data, 19 security incidents, 0 authentication failures. Fault occurrence 44.4%, MTTR 2.0 h. Issue reported: no."
+      }
+    ],
+    "warnings": [],
+    "agent_trace": [
+      {
+        "agent": "query_understanding",
+        "role": "Extracts KPI symptoms, severity and location/season filters from the query",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.0,
+        "notes": {
+          "lexicon_conditions": {
+            "high_latency": 1,
+            "packet_loss": 1,
+            "low_throughput": 1
+          },
+          "auto_filters": {},
+          "conditions": {
+            "high_latency": 1,
+            "packet_loss": 1,
+            "low_throughput": 1
+          }
+        }
+      },
+      {
+        "agent": "retrieval",
+        "role": "Finds the most similar historical network cases (BM25 + dense vectors + RRF + re-ranking)",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 104.0,
+        "notes": {
+          "n_hits": 3,
+          "candidates": 24941,
+          "latency_ms": 101.1,
+          "top": [
+            [
+              "NOC-004223",
+              1.0
+            ],
+            [
+              "NOC-080067",
+              0.967
+            ],
+            [
+              "NOC-075523",
+              0.964
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

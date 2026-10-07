@@ -1,0 +1,621 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/recommend",
+    "body": {
+      "query": "Multiple cells are experiencing poor service quality and increasing alarm counts. What factors could be contributing to the problem?",
+      "top_k": 5
+    }
+  },
+  "status": 200,
+  "response": {
+    "query": "Multiple cells are experiencing poor service quality and increasing alarm counts. What factors could be contributing to the problem?",
+    "understanding": {
+      "conditions": {
+        "high_latency": {
+          "label": "high latency",
+          "severity": "degraded"
+        },
+        "packet_loss": {
+          "label": "packet loss",
+          "severity": "degraded"
+        },
+        "low_throughput": {
+          "label": "reduced throughput",
+          "severity": "degraded"
+        },
+        "alarm_storm": {
+          "label": "elevated alarm count",
+          "severity": "degraded"
+        }
+      },
+      "auto_filters_applied": {}
+    },
+    "guardrails": {
+      "checks": {
+        "length": "pass",
+        "prompt_injection": "pass",
+        "pii": "pass",
+        "domain_relevance": "pass"
+      },
+      "redactions": {}
+    },
+    "retrieval": {
+      "candidates_after_filter": 100000,
+      "mode": "hybrid",
+      "alpha": 0.6,
+      "latency_ms": 144.2,
+      "relaxed_filters": [],
+      "filters": {}
+    },
+    "similar_cases": [
+      {
+        "case_id": "NOC-039676",
+        "score": 0.9246,
+        "scores": {
+          "dense": 0.435,
+          "bm25": 0.0,
+          "dense_rank": 9,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Allenchester",
+          "state": "VA",
+          "zip": "90606"
+        },
+        "season": "Summer",
+        "weather": "Rain",
+        "category": "EQUIPMENT_FAULT",
+        "category_name": "Equipment Fault & Alarms",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 90.1,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "elevated alarm count",
+          "critical alarms",
+          "low cell availability",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high data usage",
+          "authentication failures",
+          "high fault occurrence",
+          "extreme temperature"
+        ],
+        "kpis": {
+          "cell_availability": 79.352,
+          "throughput_mbps": 390.089,
+          "latency_ms": 115.803,
+          "packet_loss_rate": 12.48,
+          "jitter_ms": 13.64,
+          "call_drop_rate": 2.541,
+          "handover_success_rate": 92.47,
+          "signal_strength_dbm": -103.32,
+          "connection_setup_success_rate": 99.0,
+          "alarm_count": 12.0,
+          "critical_alarm_count": 9.387,
+          "user_count": 5062.0,
+          "authentication_failures": 35.0,
+          "fault_occurrence_rate": 57.137,
+          "mttr_hours": 7.11
+        },
+        "issue_reported": "yes",
+        "text": "Summer network incident at Allenchester, VA. Weather rain, 37\u00b0C, humidity 64%. Observed conditions: high latency (116 ms); severe packet loss (12.5%); reduced throughput (390 Mbps); call drops (2.5%); handover failures (92.5%); elevated alarm count (12); critical alarms (9); severe low cell availability (79.4%); severe frequent parameter changes (19); failed configuration changes (91.4%); severe high data usage (46 GB); severe authentication failures (35); severe high fault occurrence (57.1%); extreme temperature (36.8\u00b0C). Classified as Equipment Fault & Alarms, priority P1, risk 90/100. KPIs: availability 79.4%, throughput 390 Mbps, latency 116 ms, packet loss 12.5%, jitter 14 ms, call drop 2.54%, handover success 92.5%, signal -103 dBm, setup success 99.0%. Alarms 12 (critical 9.4), 19 parameter changes (91.4% successful), 5062 users, 46 GB data, 7 security incidents, 35 authentication failures. Fault occurrence 57.1%, MTTR 7.1 h. Issue reported: yes."
+      },
+      {
+        "case_id": "NOC-075125",
+        "score": 0.9125,
+        "scores": {
+          "dense": 0.4573,
+          "bm25": 0.0,
+          "dense_rank": 1,
+          "bm25_rank": null,
+          "condition_overlap": 0.75,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Jenniferport",
+          "state": "OK",
+          "zip": "34641"
+        },
+        "season": "Fall",
+        "weather": "Clouds",
+        "category": "EQUIPMENT_FAULT",
+        "category_name": "Equipment Fault & Alarms",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 89.4,
+        "conditions": [
+          "high latency",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "high jitter",
+          "elevated alarm count",
+          "critical alarms",
+          "low cell availability",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 75.566,
+          "throughput_mbps": 255.685,
+          "latency_ms": 130.566,
+          "packet_loss_rate": 9.125,
+          "jitter_ms": 45.45,
+          "call_drop_rate": 2.763,
+          "handover_success_rate": 92.32,
+          "signal_strength_dbm": -68.21,
+          "connection_setup_success_rate": 98.14,
+          "alarm_count": 14.0,
+          "critical_alarm_count": 11.096,
+          "user_count": 3410.0,
+          "authentication_failures": 6.0,
+          "fault_occurrence_rate": 57.175,
+          "mttr_hours": 8.41
+        },
+        "issue_reported": "no",
+        "text": "Fall network incident at Jenniferport, OK. Weather clouds, 10\u00b0C, humidity 62%. Observed conditions: severe high latency (131 ms); severe reduced throughput (256 Mbps); call drops (2.8%); handover failures (92.3%); severe high jitter (45 ms); severe elevated alarm count (14); severe critical alarms (11); severe low cell availability (75.6%); frequent parameter changes (15); failed configuration changes (91.8%); high data usage (43 GB); security incidents (17); severe high fault occurrence (57.2%); long repair time (MTTR) (8.4 h). Classified as Equipment Fault & Alarms, priority P1, risk 89/100. KPIs: availability 75.6%, throughput 256 Mbps, latency 131 ms, packet loss 9.1%, jitter 45 ms, call drop 2.76%, handover success 92.3%, signal -68 dBm, setup success 98.1%. Alarms 14 (critical 11.1), 15 parameter changes (91.8% successful), 3410 users, 43 GB data, 17 security incidents, 6 authentication failures. Fault occurrence 57.2%, MTTR 8.4 h. Issue reported: no."
+      },
+      {
+        "case_id": "NOC-070236",
+        "score": 0.902,
+        "scores": {
+          "dense": 0.4431,
+          "bm25": 0.0,
+          "dense_rank": 2,
+          "bm25_rank": null,
+          "condition_overlap": 0.75,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Ellisstad",
+          "state": "IA",
+          "zip": "67414"
+        },
+        "season": "Summer",
+        "weather": "Rain",
+        "category": "EQUIPMENT_FAULT",
+        "category_name": "Equipment Fault & Alarms",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 93.6,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "call drops",
+          "poor signal strength",
+          "elevated alarm count",
+          "critical alarms",
+          "low cell availability",
+          "frequent parameter changes",
+          "high user load",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence"
+        ],
+        "kpis": {
+          "cell_availability": 82.068,
+          "throughput_mbps": 425.704,
+          "latency_ms": 114.567,
+          "packet_loss_rate": 10.215,
+          "jitter_ms": 29.61,
+          "call_drop_rate": 3.224,
+          "handover_success_rate": 99.09,
+          "signal_strength_dbm": -119.99,
+          "connection_setup_success_rate": 94.58,
+          "alarm_count": 12.0,
+          "critical_alarm_count": 9.168,
+          "user_count": 8311.0,
+          "authentication_failures": 35.0,
+          "fault_occurrence_rate": 59.747,
+          "mttr_hours": 6.21
+        },
+        "issue_reported": "yes",
+        "text": "Summer network incident at Ellisstad, IA. Weather rain, 31\u00b0C, humidity 66%. Observed conditions: high latency (115 ms); packet loss (10.2%); severe call drops (3.2%); severe poor signal strength (-120 dBm); elevated alarm count (12); critical alarms (9); low cell availability (82.1%); severe frequent parameter changes (19); high user load (8311); severe high data usage (46 GB); severe security incidents (19); severe authentication failures (35); severe high fault occurrence (59.7%). Classified as Equipment Fault & Alarms, priority P1, risk 94/100. KPIs: availability 82.1%, throughput 426 Mbps, latency 115 ms, packet loss 10.2%, jitter 30 ms, call drop 3.22%, handover success 99.1%, signal -120 dBm, setup success 94.6%. Alarms 12 (critical 9.2), 19 parameter changes (97.3% successful), 8311 users, 46 GB data, 19 security incidents, 35 authentication failures. Fault occurrence 59.7%, MTTR 6.2 h. Issue reported: yes."
+      },
+      {
+        "case_id": "NOC-031129",
+        "score": 0.8858,
+        "scores": {
+          "dense": 0.4297,
+          "bm25": 0.0,
+          "dense_rank": 14,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Andreaton",
+          "state": "TN",
+          "zip": "58572"
+        },
+        "season": "Winter",
+        "weather": "Clouds",
+        "category": "EQUIPMENT_FAULT",
+        "category_name": "Equipment Fault & Alarms",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 96.9,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "poor signal strength",
+          "elevated alarm count",
+          "critical alarms",
+          "low cell availability",
+          "failed configuration changes",
+          "high user load",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 76.107,
+          "throughput_mbps": 257.65,
+          "latency_ms": 121.389,
+          "packet_loss_rate": 11.325,
+          "jitter_ms": 11.13,
+          "call_drop_rate": 2.089,
+          "handover_success_rate": 90.03,
+          "signal_strength_dbm": -107.42,
+          "connection_setup_success_rate": 98.38,
+          "alarm_count": 15.0,
+          "critical_alarm_count": 10.901,
+          "user_count": 8939.0,
+          "authentication_failures": 18.0,
+          "fault_occurrence_rate": 61.455,
+          "mttr_hours": 8.76
+        },
+        "issue_reported": "no",
+        "text": "Winter network incident at Andreaton, TN. Weather clouds, 5\u00b0C, humidity 42%. Observed conditions: high latency (121 ms); packet loss (11.3%); severe reduced throughput (258 Mbps); call drops (2.1%); severe handover failures (90.0%); poor signal strength (-107 dBm); severe elevated alarm count (15); severe critical alarms (11); severe low cell availability (76.1%); severe failed configuration changes (90.6%); high user load (8939); severe security incidents (18); authentication failures (18); severe high fault occurrence (61.5%); long repair time (MTTR) (8.8 h). Classified as Equipment Fault & Alarms, priority P1, risk 97/100. KPIs: availability 76.1%, throughput 258 Mbps, latency 121 ms, packet loss 11.3%, jitter 11 ms, call drop 2.09%, handover success 90.0%, signal -107 dBm, setup success 98.4%. Alarms 15 (critical 10.9), 3 parameter changes (90.6% successful), 8939 users, 19 GB data, 18 security incidents, 18 authentication failures. Fault occurrence 61.5%, MTTR 8.8 h. Issue reported: no."
+      },
+      {
+        "case_id": "NOC-092989",
+        "score": 0.882,
+        "scores": {
+          "dense": 0.4415,
+          "bm25": 0.0,
+          "dense_rank": 4,
+          "bm25_rank": null,
+          "condition_overlap": 0.75,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Carolborough",
+          "state": "PR",
+          "zip": "76199"
+        },
+        "season": "Fall",
+        "weather": "Clouds",
+        "category": "EQUIPMENT_FAULT",
+        "category_name": "Equipment Fault & Alarms",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 84.0,
+        "conditions": [
+          "high latency",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "poor signal strength",
+          "high jitter",
+          "elevated alarm count",
+          "critical alarms",
+          "low cell availability",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 80.056,
+          "throughput_mbps": 352.486,
+          "latency_ms": 118.405,
+          "packet_loss_rate": 8.8,
+          "jitter_ms": 41.56,
+          "call_drop_rate": 2.629,
+          "handover_success_rate": 90.3,
+          "signal_strength_dbm": -115.74,
+          "connection_setup_success_rate": 93.17,
+          "alarm_count": 12.0,
+          "critical_alarm_count": 9.781,
+          "user_count": 6256.0,
+          "authentication_failures": 0.0,
+          "fault_occurrence_rate": 49.32,
+          "mttr_hours": 8.63
+        },
+        "issue_reported": "yes",
+        "text": "Fall network incident at Carolborough, PR. Weather clouds, 16\u00b0C, humidity 51%. Observed conditions: high latency (118 ms); reduced throughput (352 Mbps); call drops (2.6%); severe handover failures (90.3%); severe poor signal strength (-116 dBm); high jitter (42 ms); elevated alarm count (12); severe critical alarms (10); low cell availability (80.1%); severe frequent parameter changes (19); failed configuration changes (91.7%); severe high data usage (50 GB); security incidents (16); high fault occurrence (49.3%); long repair time (MTTR) (8.6 h). Classified as Equipment Fault & Alarms, priority P1, risk 84/100. KPIs: availability 80.1%, throughput 352 Mbps, latency 118 ms, packet loss 8.8%, jitter 42 ms, call drop 2.63%, handover success 90.3%, signal -116 dBm, setup success 93.2%. Alarms 12 (critical 9.8), 19 parameter changes (91.7% successful), 6256 users, 50 GB data, 16 security incidents, 0 authentication failures. Fault occurrence 49.3%, MTTR 8.6 h. Issue reported: yes."
+      }
+    ],
+    "warnings": [],
+    "classification": {
+      "category": "EQUIPMENT_FAULT",
+      "category_name": "Equipment Fault & Alarms",
+      "confidence": 0.526,
+      "secondary": [
+        {
+          "category": "TRANSPORT_QOS",
+          "category_name": "Transport & QoS Degradation",
+          "score": 0.316
+        },
+        {
+          "category": "CAPACITY",
+          "category_name": "Capacity & Congestion",
+          "score": 0.158
+        }
+      ],
+      "conditions": {
+        "high_latency": 1,
+        "packet_loss": 1,
+        "low_throughput": 1,
+        "alarm_storm": 1
+      },
+      "method": "rules+knn",
+      "rationale": "Symptoms ['high_latency', 'packet_loss', 'low_throughput', 'alarm_storm'] map to Equipment Fault & Alarms; 100% of similar-case evidence agrees.",
+      "distribution": {
+        "Equipment Fault & Alarms": 0.526,
+        "Transport & QoS Degradation": 0.316,
+        "Capacity & Congestion": 0.158
+      }
+    },
+    "prioritization": {
+      "priority": "P1",
+      "severity": "Critical",
+      "risk_score": 90.7
+    },
+    "recommendation": {
+      "summary": "P1 Equipment Fault & Alarms (risk 90.7/100, predicted fault occurrence 56.22%). 5 similar historical cases retrieved (NOC-039676, NOC-075125, NOC-070236).",
+      "diagnosis": "The pattern is most consistent with Equipment Fault & Alarms. Largest deviations from the fleet baseline: Parameter Changes at 19.0 (fleet median 10.0), Data Usage (GB) at 45.9 (fleet median 25.16), Cell Availability (%) at 79.35 (fleet median 89.4). The fault-risk model attributes elevated fault likelihood mainly to Critical Alarm Count (+8.7 pp), Authentication Failures (+3.8 pp), Throughput (Mbps) (+3.0 pp). Among similar historical cases: high latency in 100%, call drops in 100%, elevated alarm count in 100%. Closest precedents: NOC-039676, NOC-075125, NOC-070236.",
+      "actions": [
+        {
+          "step": "Correlate and de-duplicate alarms; identify root alarm in the alarm chain",
+          "phase": "immediate",
+          "rationale": "Addresses elevated alarm count (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Dispatch field engineer for hardware swap if critical alarms persist",
+          "phase": "immediate",
+          "rationale": "Addresses elevated alarm count (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": true,
+          "feedback_score": 0
+        },
+        {
+          "step": "Check site power, battery backup and cooling status",
+          "phase": "short_term",
+          "rationale": "Addresses elevated alarm count (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Roll back recent software if fault started after an upgrade",
+          "phase": "short_term",
+          "rationale": "Addresses elevated alarm count (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": true,
+          "feedback_score": 0
+        },
+        {
+          "step": "Check transport link utilisation, CRC errors and interface drops",
+          "phase": "short_term",
+          "rationale": "Addresses high latency, packet loss (Transport & QoS Degradation)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:TRANSPORT_QOS"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Run TWAMP/ping tests per hop to localise latency and loss",
+          "phase": "short_term",
+          "rationale": "Addresses high latency, packet loss (Transport & QoS Degradation)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:TRANSPORT_QOS"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Enable/tune load balancing (MLB) and inter-frequency offload",
+          "phase": "short_term",
+          "rationale": "Addresses reduced throughput (Capacity & Congestion)",
+          "evidence": [
+            "NOC-039676",
+            "NOC-075125",
+            "SOP:CAPACITY"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Open a priority trouble ticket and track MTTR against SLA",
+          "phase": "preventive",
+          "rationale": "Prevent recurrence of this incident pattern",
+          "evidence": [
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": false
+        }
+      ],
+      "monitoring": [
+        "Critical Alarm Count: <= 6.7 (fleet median)",
+        "Alarm Count: <= 10.0 (fleet median)",
+        "Fault Occurrence Rate (%): <= 39.5 (fleet median)",
+        "MTTR (hours): <= 5.2 (fleet median)",
+        "Latency (ms): <= 77.2 (fleet median)",
+        "Packet Loss Rate (%): <= 6.2 (fleet median)",
+        "Jitter (ms): <= 25.0 (fleet median)"
+      ],
+      "escalation": "Page on-call RAN/transport lead now; open a major-incident bridge within 15 min; update every 30 min.",
+      "method": "sop_playbook+feedback",
+      "guardrail_issues": [],
+      "human_approval_required": true,
+      "sops_used": [
+        "Equipment Fault & Alarms",
+        "Transport & QoS Degradation",
+        "Capacity & Congestion"
+      ]
+    },
+    "agent_trace": [
+      {
+        "agent": "query_understanding",
+        "role": "Extracts KPI symptoms, severity and location/season filters from the query",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.0,
+        "notes": {
+          "lexicon_conditions": {
+            "high_latency": 1,
+            "packet_loss": 1,
+            "low_throughput": 1,
+            "alarm_storm": 1
+          },
+          "auto_filters": {},
+          "conditions": {
+            "high_latency": 1,
+            "packet_loss": 1,
+            "low_throughput": 1,
+            "alarm_storm": 1
+          }
+        }
+      },
+      {
+        "agent": "retrieval",
+        "role": "Finds the most similar historical network cases (BM25 + dense vectors + RRF + re-ranking)",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 144.5,
+        "notes": {
+          "n_hits": 5,
+          "candidates": 100000,
+          "latency_ms": 144.2,
+          "top": [
+            [
+              "NOC-039676",
+              0.9246
+            ],
+            [
+              "NOC-075125",
+              0.9125
+            ],
+            [
+              "NOC-070236",
+              0.902
+            ]
+          ]
+        }
+      },
+      {
+        "agent": "classification",
+        "role": "Classifies the incident into the NOC taxonomy with a confidence score",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.1,
+        "notes": {
+          "rule_scores": {
+            "TRANSPORT_QOS": 0.526,
+            "CAPACITY": 0.263,
+            "EQUIPMENT_FAULT": 0.211
+          },
+          "knn_votes": {
+            "EQUIPMENT_FAULT": 1.0
+          },
+          "category": "EQUIPMENT_FAULT",
+          "confidence": 0.526,
+          "method": "rules+knn"
+        }
+      },
+      {
+        "agent": "risk_prediction",
+        "role": "Predicts fault risk, network performance and assigns incident priority",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 258.5,
+        "notes": {
+          "risk": 90.7,
+          "priority": "P1",
+          "fault_rate": 56.22,
+          "profile_source": "similar_cases+query_symptoms"
+        }
+      },
+      {
+        "agent": "root_cause_impact",
+        "role": "Performs root-cause and network-impact analysis",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 130.4,
+        "notes": {
+          "top_deviation": "Parameter Changes",
+          "top_driver": "Critical Alarm Count",
+          "method": "deterministic"
+        }
+      },
+      {
+        "agent": "recommendation",
+        "role": "Generates a grounded, prioritised troubleshooting plan",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 97.7,
+        "notes": {
+          "n_actions": 8,
+          "method": "sop_playbook+feedback",
+          "guardrail_issues": 0,
+          "revision": 0
+        }
+      }
+    ],
+    "llm": {
+      "provider": "none",
+      "model": "none",
+      "available": false,
+      "calls": 0,
+      "failures": 0,
+      "avg_latency_ms": 0,
+      "used": false
+    },
+    "response_id": "d65ef87378f2"
+  }
+}

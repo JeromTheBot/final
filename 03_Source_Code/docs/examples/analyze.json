@@ -1,0 +1,804 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/analyze",
+    "body": {
+      "query": "A network region has increasing fault occurrence and declining handover success. What corrective actions should be considered?",
+      "top_k": 5
+    }
+  },
+  "status": 200,
+  "response": {
+    "query": "A network region has increasing fault occurrence and declining handover success. What corrective actions should be considered?",
+    "understanding": {
+      "conditions": {
+        "handover_failure": {
+          "label": "handover failures",
+          "severity": "degraded"
+        },
+        "high_fault_rate": {
+          "label": "high fault occurrence",
+          "severity": "degraded"
+        }
+      },
+      "auto_filters_applied": {}
+    },
+    "guardrails": {
+      "checks": {
+        "length": "pass",
+        "prompt_injection": "pass",
+        "pii": "pass",
+        "domain_relevance": "pass"
+      },
+      "redactions": {}
+    },
+    "retrieval": {
+      "candidates_after_filter": 100000,
+      "mode": "hybrid",
+      "alpha": 0.6,
+      "latency_ms": 85.2,
+      "relaxed_filters": [],
+      "filters": {}
+    },
+    "similar_cases": [
+      {
+        "case_id": "NOC-047966",
+        "score": 1.0,
+        "scores": {
+          "dense": 0.5787,
+          "bm25": 0.0,
+          "dense_rank": 1,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "South Tracitown",
+          "state": "KS",
+          "zip": "3169"
+        },
+        "season": "Fall",
+        "weather": "Rain",
+        "category": "MOBILITY",
+        "category_name": "Mobility & Handover",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 87.8,
+        "conditions": [
+          "packet loss",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "poor signal strength",
+          "critical alarms",
+          "connection setup failures",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 92.478,
+          "throughput_mbps": 264.52,
+          "latency_ms": 43.107,
+          "packet_loss_rate": 13.935,
+          "jitter_ms": 18.96,
+          "call_drop_rate": 1.843,
+          "handover_success_rate": 90.1,
+          "signal_strength_dbm": -106.77,
+          "connection_setup_success_rate": 92.17,
+          "alarm_count": 4.0,
+          "critical_alarm_count": 8.723,
+          "user_count": 6820.0,
+          "authentication_failures": 30.0,
+          "fault_occurrence_rate": 59.292,
+          "mttr_hours": 8.75
+        },
+        "issue_reported": "yes",
+        "text": "Fall network incident at South Tracitown, KS. Weather rain, 13\u00b0C, humidity 69%. Observed conditions: severe packet loss (13.9%); severe reduced throughput (265 Mbps); call drops (1.8%); severe handover failures (90.1%); poor signal strength (-107 dBm); critical alarms (9); connection setup failures (92.2%); failed configuration changes (92.2%); high data usage (43 GB); severe security incidents (18); authentication failures (30); severe high fault occurrence (59.3%); long repair time (MTTR) (8.8 h). Classified as Mobility & Handover, priority P1, risk 88/100. KPIs: availability 92.5%, throughput 265 Mbps, latency 43 ms, packet loss 13.9%, jitter 19 ms, call drop 1.84%, handover success 90.1%, signal -107 dBm, setup success 92.2%. Alarms 4 (critical 8.7), 10 parameter changes (92.2% successful), 6820 users, 43 GB data, 18 security incidents, 30 authentication failures. Fault occurrence 59.3%, MTTR 8.8 h. Issue reported: yes."
+      },
+      {
+        "case_id": "NOC-067096",
+        "score": 0.9895,
+        "scores": {
+          "dense": 0.5692,
+          "bm25": 0.0,
+          "dense_rank": 2,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Nguyenstad",
+          "state": "PW",
+          "zip": "53298"
+        },
+        "season": "Fall",
+        "weather": "Rain",
+        "category": "MOBILITY",
+        "category_name": "Mobility & Handover",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 84.0,
+        "conditions": [
+          "high latency",
+          "call drops",
+          "handover failures",
+          "high jitter",
+          "elevated alarm count",
+          "connection setup failures",
+          "failed configuration changes",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 97.448,
+          "throughput_mbps": 563.292,
+          "latency_ms": 152.437,
+          "packet_loss_rate": 6.885,
+          "jitter_ms": 45.01,
+          "call_drop_rate": 3.562,
+          "handover_success_rate": 90.29,
+          "signal_strength_dbm": -71.55,
+          "connection_setup_success_rate": 92.26,
+          "alarm_count": 15.0,
+          "critical_alarm_count": 8.179,
+          "user_count": 5687.0,
+          "authentication_failures": 45.0,
+          "fault_occurrence_rate": 57.877,
+          "mttr_hours": 8.33
+        },
+        "issue_reported": "no",
+        "text": "Fall network incident at Nguyenstad, PW. Weather rain, 21\u00b0C, humidity 37%. Observed conditions: severe high latency (152 ms); severe call drops (3.6%); severe handover failures (90.3%); severe high jitter (45 ms); severe elevated alarm count (15); connection setup failures (92.3%); failed configuration changes (91.7%); severe high data usage (46 GB); security incidents (16); severe authentication failures (45); severe high fault occurrence (57.9%); long repair time (MTTR) (8.3 h). Classified as Mobility & Handover, priority P1, risk 84/100. KPIs: availability 97.4%, throughput 563 Mbps, latency 152 ms, packet loss 6.9%, jitter 45 ms, call drop 3.56%, handover success 90.3%, signal -72 dBm, setup success 92.3%. Alarms 15 (critical 8.2), 5 parameter changes (91.7% successful), 5687 users, 46 GB data, 16 security incidents, 45 authentication failures. Fault occurrence 57.9%, MTTR 8.3 h. Issue reported: no."
+      },
+      {
+        "case_id": "NOC-031050",
+        "score": 0.9794,
+        "scores": {
+          "dense": 0.5675,
+          "bm25": 0.0,
+          "dense_rank": 3,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Janetside",
+          "state": "UT",
+          "zip": "26679"
+        },
+        "season": "Fall",
+        "weather": "Rain",
+        "category": "MOBILITY",
+        "category_name": "Mobility & Handover",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 93.9,
+        "conditions": [
+          "call drops",
+          "handover failures",
+          "low cell availability",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high user load",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence",
+          "long repair time (MTTR)"
+        ],
+        "kpis": {
+          "cell_availability": 76.698,
+          "throughput_mbps": 600.512,
+          "latency_ms": 89.238,
+          "packet_loss_rate": 3.18,
+          "jitter_ms": 13.12,
+          "call_drop_rate": 3.159,
+          "handover_success_rate": 90.4,
+          "signal_strength_dbm": -94.95,
+          "connection_setup_success_rate": 95.83,
+          "alarm_count": 11.0,
+          "critical_alarm_count": 7.167,
+          "user_count": 9175.0,
+          "authentication_failures": 45.0,
+          "fault_occurrence_rate": 55.268,
+          "mttr_hours": 7.64
+        },
+        "issue_reported": "yes",
+        "text": "Fall network incident at Janetside, UT. Weather rain, 15\u00b0C, humidity 50%. Observed conditions: severe call drops (3.2%); severe handover failures (90.4%); severe low cell availability (76.7%); frequent parameter changes (17); severe failed configuration changes (90.1%); severe high user load (9175); severe high data usage (49 GB); severe security incidents (18); severe authentication failures (45); high fault occurrence (55.3%); long repair time (MTTR) (7.6 h). Classified as Mobility & Handover, priority P1, risk 94/100. KPIs: availability 76.7%, throughput 601 Mbps, latency 89 ms, packet loss 3.2%, jitter 13 ms, call drop 3.16%, handover success 90.4%, signal -95 dBm, setup success 95.8%. Alarms 11 (critical 7.2), 17 parameter changes (90.1% successful), 9175 users, 49 GB data, 18 security incidents, 45 authentication failures. Fault occurrence 55.3%, MTTR 7.6 h. Issue reported: yes."
+      },
+      {
+        "case_id": "NOC-050476",
+        "score": 0.9695,
+        "scores": {
+          "dense": 0.5629,
+          "bm25": 0.0,
+          "dense_rank": 4,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "New Jennifer",
+          "state": "MP",
+          "zip": "70088"
+        },
+        "season": "Fall",
+        "weather": "Rain",
+        "category": "MOBILITY",
+        "category_name": "Mobility & Handover",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 83.2,
+        "conditions": [
+          "packet loss",
+          "call drops",
+          "handover failures",
+          "elevated alarm count",
+          "critical alarms",
+          "connection setup failures",
+          "frequent parameter changes",
+          "failed configuration changes",
+          "high user load",
+          "high data usage",
+          "security incidents",
+          "authentication failures",
+          "high fault occurrence"
+        ],
+        "kpis": {
+          "cell_availability": 93.909,
+          "throughput_mbps": 437.582,
+          "latency_ms": 18.511,
+          "packet_loss_rate": 12.885,
+          "jitter_ms": 22.8,
+          "call_drop_rate": 2.627,
+          "handover_success_rate": 90.74,
+          "signal_strength_dbm": -62.84,
+          "connection_setup_success_rate": 90.96,
+          "alarm_count": 12.0,
+          "critical_alarm_count": 8.89,
+          "user_count": 7611.0,
+          "authentication_failures": 20.0,
+          "fault_occurrence_rate": 52.384,
+          "mttr_hours": 4.4
+        },
+        "issue_reported": "yes",
+        "text": "Fall network incident at New Jennifer, MP. Weather rain, 11\u00b0C, humidity 31%. Observed conditions: severe packet loss (12.9%); call drops (2.6%); severe handover failures (90.7%); elevated alarm count (12); critical alarms (9); severe connection setup failures (91.0%); frequent parameter changes (17); failed configuration changes (91.6%); high user load (7611); high data usage (39 GB); security incidents (15); authentication failures (20); high fault occurrence (52.4%). Classified as Mobility & Handover, priority P1, risk 83/100. KPIs: availability 93.9%, throughput 438 Mbps, latency 19 ms, packet loss 12.9%, jitter 23 ms, call drop 2.63%, handover success 90.7%, signal -63 dBm, setup success 91.0%. Alarms 12 (critical 8.9), 17 parameter changes (91.6% successful), 7611 users, 39 GB data, 15 security incidents, 20 authentication failures. Fault occurrence 52.4%, MTTR 4.4 h. Issue reported: yes."
+      },
+      {
+        "case_id": "NOC-050911",
+        "score": 0.96,
+        "scores": {
+          "dense": 0.5573,
+          "bm25": 0.0,
+          "dense_rank": 5,
+          "bm25_rank": null,
+          "condition_overlap": 1.0,
+          "feedback_boost": 0.0
+        },
+        "location": {
+          "city": "Chaneyhaven",
+          "state": "PR",
+          "zip": "14144"
+        },
+        "season": "Fall",
+        "weather": "Rain",
+        "category": "MOBILITY",
+        "category_name": "Mobility & Handover",
+        "priority": "P1",
+        "severity": "Critical",
+        "risk_score": 80.2,
+        "conditions": [
+          "high latency",
+          "packet loss",
+          "reduced throughput",
+          "call drops",
+          "handover failures",
+          "poor signal strength",
+          "critical alarms",
+          "connection setup failures",
+          "high data usage",
+          "security incidents",
+          "high fault occurrence"
+        ],
+        "kpis": {
+          "cell_availability": 89.467,
+          "throughput_mbps": 209.526,
+          "latency_ms": 141.128,
+          "packet_loss_rate": 12.045,
+          "jitter_ms": 34.58,
+          "call_drop_rate": 4.197,
+          "handover_success_rate": 90.56,
+          "signal_strength_dbm": -109.45,
+          "connection_setup_success_rate": 90.88,
+          "alarm_count": 5.0,
+          "critical_alarm_count": 9.904,
+          "user_count": 4545.0,
+          "authentication_failures": 0.0,
+          "fault_occurrence_rate": 50.846,
+          "mttr_hours": 0.96
+        },
+        "issue_reported": "no",
+        "text": "Fall network incident at Chaneyhaven, PR. Weather rain, 12\u00b0C, humidity 32%. Observed conditions: severe high latency (141 ms); severe packet loss (12.0%); severe reduced throughput (210 Mbps); severe call drops (4.2%); severe handover failures (90.6%); poor signal strength (-109 dBm); severe critical alarms (10); severe connection setup failures (90.9%); severe high data usage (46 GB); security incidents (15); high fault occurrence (50.8%). Classified as Mobility & Handover, priority P1, risk 80/100. KPIs: availability 89.5%, throughput 210 Mbps, latency 141 ms, packet loss 12.0%, jitter 35 ms, call drop 4.20%, handover success 90.6%, signal -109 dBm, setup success 90.9%. Alarms 5 (critical 9.9), 8 parameter changes (98.5% successful), 4545 users, 46 GB data, 15 security incidents, 0 authentication failures. Fault occurrence 50.8%, MTTR 1.0 h. Issue reported: no."
+      }
+    ],
+    "warnings": [],
+    "classification": {
+      "category": "MOBILITY",
+      "category_name": "Mobility & Handover",
+      "confidence": 0.76,
+      "secondary": [
+        {
+          "category": "EQUIPMENT_FAULT",
+          "category_name": "Equipment Fault & Alarms",
+          "score": 0.24
+        }
+      ],
+      "conditions": {
+        "handover_failure": 1,
+        "high_fault_rate": 1
+      },
+      "method": "rules+knn",
+      "rationale": "Symptoms ['handover_failure', 'high_fault_rate'] map to Mobility & Handover; 100% of similar-case evidence agrees.",
+      "distribution": {
+        "Mobility & Handover": 0.76,
+        "Equipment Fault & Alarms": 0.24
+      }
+    },
+    "prioritization": {
+      "priority": "P1",
+      "severity": "Critical",
+      "risk_score": 85.7
+    },
+    "recommendation": {
+      "summary": "P1 Mobility & Handover (risk 85.7/100, predicted fault occurrence 55.73%). 5 similar historical cases retrieved (NOC-047966, NOC-067096, NOC-031050).",
+      "diagnosis": "The pattern is most consistent with Mobility & Handover. Largest deviations from the fleet baseline: Call Drop Rate (%) at 3.16 (fleet median 0.0), Data Usage (GB) at 46.05 (fleet median 25.16), Packet Loss Rate (%) at 12.04 (fleet median 6.24). The fault-risk model attributes elevated fault likelihood mainly to Authentication Failures (+7.5 pp), Critical Alarm Count (+5.5 pp), Throughput (Mbps) (+2.0 pp). Among similar historical cases: call drops in 100%, handover failures in 100%, high data usage in 100%. Closest precedents: NOC-047966, NOC-067096, NOC-031050.",
+      "actions": [
+        {
+          "step": "Audit ANR neighbour lists and add missing relations",
+          "phase": "immediate",
+          "rationale": "Addresses handover failures (Mobility & Handover)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:MOBILITY"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Tune A3 offset, hysteresis and time-to-trigger parameters",
+          "phase": "immediate",
+          "rationale": "Addresses handover failures (Mobility & Handover)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:MOBILITY"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Analyse handover failure causes (too early / too late / wrong cell)",
+          "phase": "short_term",
+          "rationale": "Addresses handover failures (Mobility & Handover)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:MOBILITY"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Check RLF counters and adjust radio link timers",
+          "phase": "short_term",
+          "rationale": "Addresses handover failures (Mobility & Handover)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:MOBILITY"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Correlate and de-duplicate alarms; identify root alarm in the alarm chain",
+          "phase": "short_term",
+          "rationale": "Addresses high fault occurrence (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": false,
+          "feedback_score": 0
+        },
+        {
+          "step": "Dispatch field engineer for hardware swap if critical alarms persist",
+          "phase": "short_term",
+          "rationale": "Addresses high fault occurrence (Equipment Fault & Alarms)",
+          "evidence": [
+            "NOC-047966",
+            "NOC-067096",
+            "SOP:EQUIPMENT_FAULT"
+          ],
+          "requires_approval": true,
+          "feedback_score": 0
+        },
+        {
+          "step": "Validate X2/Xn interface health between neighbour sites",
+          "phase": "preventive",
+          "rationale": "Prevent recurrence of this incident pattern",
+          "evidence": [
+            "SOP:MOBILITY"
+          ],
+          "requires_approval": false
+        }
+      ],
+      "monitoring": [
+        "Handover Success Rate (%): >= 95.0 (fleet median)",
+        "Call Drop Rate (%): <= 0.0 (fleet median)",
+        "Critical Alarm Count: <= 6.7 (fleet median)",
+        "Alarm Count: <= 10.0 (fleet median)",
+        "Fault Occurrence Rate (%): <= 39.5 (fleet median)",
+        "MTTR (hours): <= 5.2 (fleet median)"
+      ],
+      "escalation": "Page on-call RAN/transport lead now; open a major-incident bridge within 15 min; update every 30 min.",
+      "method": "sop_playbook+feedback",
+      "guardrail_issues": [],
+      "human_approval_required": true,
+      "sops_used": [
+        "Mobility & Handover",
+        "Equipment Fault & Alarms"
+      ]
+    },
+    "prediction": {
+      "fault_rate_pct": 55.73,
+      "early_warning_fault_rate_pct": 54.59,
+      "high_risk_probability": 1.0,
+      "fault_rate_percentile": 90.3,
+      "risk_score": 85.7,
+      "priority": "P1",
+      "severity": "Critical",
+      "performance_forecast": {
+        "Throughput (Mbps)": {
+          "predicted": 448.95,
+          "fleet_median": 549.21,
+          "percentile": 34.4
+        },
+        "Latency (ms)": {
+          "predicted": 86.59,
+          "fleet_median": 77.22,
+          "percentile": 58.4
+        },
+        "Call Drop Rate (%)": {
+          "predicted": 1.71,
+          "fleet_median": 0.0,
+          "percentile": 75.7
+        }
+      },
+      "conditions": {
+        "packet_loss": 2,
+        "call_drops": 2,
+        "handover_failure": 1,
+        "critical_alarms": 1,
+        "setup_failure": 1,
+        "config_failure": 1,
+        "high_data_usage": 2,
+        "security_incidents": 1,
+        "auth_failures": 1,
+        "high_fault_rate": 1,
+        "slow_repair": 1
+      },
+      "similar_cases": {
+        "avg_fault_rate_pct": 55.13,
+        "avg_risk_score": 85.8,
+        "share_p1_p2": 1.0
+      },
+      "profile_source": "similar_cases+query_symptoms"
+    },
+    "root_cause": {
+      "summary": "The pattern is most consistent with Mobility & Handover. Largest deviations from the fleet baseline: Call Drop Rate (%) at 3.16 (fleet median 0.0), Data Usage (GB) at 46.05 (fleet median 25.16), Packet Loss Rate (%) at 12.04 (fleet median 6.24). The fault-risk model attributes elevated fault likelihood mainly to Authentication Failures (+7.5 pp), Critical Alarm Count (+5.5 pp), Throughput (Mbps) (+2.0 pp). Among similar historical cases: call drops in 100%, handover failures in 100%, high data usage in 100%.",
+      "likely_root_causes": [
+        {
+          "cause": "Missing or incorrect neighbour relations",
+          "category": "Mobility & Handover",
+          "likelihood": "high",
+          "evidence": "SOP:MOBILITY"
+        },
+        {
+          "cause": "Handover thresholds/hysteresis mis-tuned",
+          "category": "Mobility & Handover",
+          "likelihood": "high",
+          "evidence": "SOP:MOBILITY"
+        },
+        {
+          "cause": "Coverage overlap too small or too large (ping-pong)",
+          "category": "Mobility & Handover",
+          "likelihood": "medium",
+          "evidence": "SOP:MOBILITY"
+        },
+        {
+          "cause": "Timer (T304/T310) misconfiguration",
+          "category": "Mobility & Handover",
+          "likelihood": "medium",
+          "evidence": "SOP:MOBILITY"
+        },
+        {
+          "cause": "Hardware failure (RRU, baseband board, power supply)",
+          "category": "Equipment Fault & Alarms",
+          "likelihood": "medium",
+          "evidence": "SOP:EQUIPMENT_FAULT"
+        },
+        {
+          "cause": "Software bug after upgrade",
+          "category": "Equipment Fault & Alarms",
+          "likelihood": "low",
+          "evidence": "SOP:EQUIPMENT_FAULT"
+        }
+      ],
+      "kpi_deviations": [
+        {
+          "kpi": "Call Drop Rate (%)",
+          "value": 3.16,
+          "fleet_median": 0.0,
+          "z_score": 1.64,
+          "badness": 1.64
+        },
+        {
+          "kpi": "Data Usage (GB)",
+          "value": 46.05,
+          "fleet_median": 25.16,
+          "z_score": 1.53,
+          "badness": 1.53
+        },
+        {
+          "kpi": "Packet Loss Rate (%)",
+          "value": 12.04,
+          "fleet_median": 6.24,
+          "z_score": 1.44,
+          "badness": 1.44
+        },
+        {
+          "kpi": "Authentication Failures",
+          "value": 30.0,
+          "fleet_median": 8.0,
+          "z_score": 1.25,
+          "badness": 1.25
+        },
+        {
+          "kpi": "Handover Success Rate (%)",
+          "value": 91.76,
+          "fleet_median": 95.02,
+          "z_score": -1.13,
+          "badness": 1.13
+        },
+        {
+          "kpi": "Security Incidents",
+          "value": 16.0,
+          "fleet_median": 10.0,
+          "z_score": 1.1,
+          "badness": 1.1
+        }
+      ],
+      "model_drivers": [
+        {
+          "feature": "Authentication Failures",
+          "value": 30.0,
+          "baseline": 8.0,
+          "contribution": 7.506
+        },
+        {
+          "feature": "Critical Alarm Count",
+          "value": 8.72333685,
+          "baseline": 6.744973275,
+          "contribution": 5.484
+        },
+        {
+          "feature": "Throughput (Mbps)",
+          "value": 437.5819,
+          "baseline": 549.563175,
+          "contribution": 1.996
+        },
+        {
+          "feature": "Security Incidents",
+          "value": 16.0,
+          "baseline": 10.0,
+          "contribution": 1.78
+        },
+        {
+          "feature": "Successful Configuration Changes (%)",
+          "value": 91.71,
+          "baseline": 94.48,
+          "contribution": 0.261
+        }
+      ],
+      "condition_prevalence_in_similar_cases": {
+        "call drops": 1.0,
+        "handover failures": 1.0,
+        "high data usage": 1.0,
+        "security incidents": 1.0,
+        "high fault occurrence": 1.0,
+        "connection setup failures": 0.8,
+        "failed configuration changes": 0.8,
+        "authentication failures": 0.8
+      },
+      "method": "deterministic"
+    },
+    "impact": {
+      "customer_impact_level": "Significant",
+      "users_affected_estimate": 6820,
+      "data_volume_at_risk_gb": 46.0,
+      "availability_gap_pp": -3.08,
+      "expected_mttr_hours": 7.64,
+      "sla_breach_risk": "High",
+      "services_affected": [
+        "Voice / VoLTE"
+      ],
+      "pattern_prevalence": {
+        "same_category_cases_in_scope": 11161,
+        "scope_size": 100000,
+        "share": 0.112
+      }
+    },
+    "judge": {
+      "scores": {
+        "groundedness": 5.0,
+        "diagnostic_correctness": 5.0,
+        "actionability": 5.0,
+        "relevance": 5.0,
+        "safety": 5.0
+      },
+      "verdict": "pass",
+      "issues": [],
+      "comment": "Deterministic evidence-consistency review.",
+      "judge": "heuristic",
+      "overall": 5.0,
+      "revision": 0
+    },
+    "sops": [
+      {
+        "category": "MOBILITY",
+        "name": "Mobility & Handover",
+        "similarity": 0.547
+      },
+      {
+        "category": "EQUIPMENT_FAULT",
+        "name": "Equipment Fault & Alarms",
+        "similarity": 0.368
+      }
+    ],
+    "agent_trace": [
+      {
+        "agent": "query_understanding",
+        "role": "Extracts KPI symptoms, severity and location/season filters from the query",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.0,
+        "notes": {
+          "lexicon_conditions": {
+            "handover_failure": 1,
+            "high_fault_rate": 1
+          },
+          "auto_filters": {},
+          "conditions": {
+            "handover_failure": 1,
+            "high_fault_rate": 1
+          }
+        }
+      },
+      {
+        "agent": "retrieval",
+        "role": "Finds the most similar historical network cases (BM25 + dense vectors + RRF + re-ranking)",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 85.4,
+        "notes": {
+          "n_hits": 5,
+          "candidates": 100000,
+          "latency_ms": 85.2,
+          "top": [
+            [
+              "NOC-047966",
+              1.0
+            ],
+            [
+              "NOC-067096",
+              0.9895
+            ],
+            [
+              "NOC-031050",
+              0.9794
+            ]
+          ]
+        }
+      },
+      {
+        "agent": "classification",
+        "role": "Classifies the incident into the NOC taxonomy with a confidence score",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.1,
+        "notes": {
+          "rule_scores": {
+            "MOBILITY": 0.6,
+            "EQUIPMENT_FAULT": 0.4
+          },
+          "knn_votes": {
+            "MOBILITY": 1.0
+          },
+          "category": "MOBILITY",
+          "confidence": 0.76,
+          "method": "rules+knn"
+        }
+      },
+      {
+        "agent": "risk_prediction",
+        "role": "Predicts fault risk, network performance and assigns incident priority",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 234.2,
+        "notes": {
+          "risk": 85.7,
+          "priority": "P1",
+          "fault_rate": 55.73,
+          "profile_source": "similar_cases+query_symptoms"
+        }
+      },
+      {
+        "agent": "root_cause_impact",
+        "role": "Performs root-cause and network-impact analysis",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 118.8,
+        "notes": {
+          "top_deviation": "Call Drop Rate (%)",
+          "top_driver": "Authentication Failures",
+          "method": "deterministic"
+        }
+      },
+      {
+        "agent": "recommendation",
+        "role": "Generates a grounded, prioritised troubleshooting plan",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 38.6,
+        "notes": {
+          "n_actions": 7,
+          "method": "sop_playbook+feedback",
+          "guardrail_issues": 0,
+          "revision": 0
+        }
+      },
+      {
+        "agent": "judge",
+        "role": "LLM-as-judge: validates the diagnosis against evidence and requests revisions",
+        "status": "ok",
+        "used_llm": false,
+        "latency_ms": 0.2,
+        "notes": {
+          "verdict": "pass",
+          "overall": 5.0,
+          "judge": "heuristic",
+          "issues": 0
+        }
+      }
+    ],
+    "llm": {
+      "provider": "none",
+      "model": "none",
+      "available": false,
+      "calls": 0,
+      "failures": 0,
+      "avg_latency_ms": 0,
+      "used": false
+    },
+    "response_id": "d61285841628"
+  }
+}

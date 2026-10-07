@@ -1,0 +1,93 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/predict/risk",
+    "body": {
+      "kpis": {
+        "critical_alarm_count": 11,
+        "authentication_failures": 35,
+        "call_drop_rate": 3.5,
+        "latency_ms": 140,
+        "packet_loss_rate": 12
+      }
+    }
+  },
+  "status": 200,
+  "response": {
+    "fault_rate_pct": 59.55,
+    "early_warning_fault_rate_pct": 49.85,
+    "high_risk_probability": 1.0,
+    "fault_rate_percentile": 94.6,
+    "risk_score": 87.3,
+    "priority": "P1",
+    "severity": "Critical",
+    "performance_forecast": {
+      "Throughput (Mbps)": {
+        "predicted": 730.52,
+        "fleet_median": 549.21,
+        "percentile": 73.7
+      },
+      "Latency (ms)": {
+        "predicted": 63.54,
+        "fleet_median": 77.22,
+        "percentile": 37.6
+      },
+      "Call Drop Rate (%)": {
+        "predicted": 0.27,
+        "fleet_median": 0.0,
+        "percentile": 54.7
+      }
+    },
+    "conditions": {
+      "high latency": "severe",
+      "packet loss": "severe",
+      "call drops": "severe",
+      "critical alarms": "severe",
+      "authentication failures": "severe"
+    },
+    "classification": {
+      "category": "TRANSPORT_QOS",
+      "category_name": "Transport & QoS Degradation",
+      "conditions": {
+        "high_latency": 2,
+        "packet_loss": 2,
+        "call_drops": 2,
+        "critical_alarms": 2,
+        "auth_failures": 2
+      },
+      "scores": {
+        "TRANSPORT_QOS": 4.0,
+        "MOBILITY": 2.0,
+        "EQUIPMENT_FAULT": 2.0,
+        "SECURITY": 2.0
+      }
+    },
+    "drivers": [
+      {
+        "feature": "Critical Alarm Count",
+        "value": 11.0,
+        "baseline": 6.744973275,
+        "contribution": 11.517
+      },
+      {
+        "feature": "Authentication Failures",
+        "value": 35.0,
+        "baseline": 8.0,
+        "contribution": 10.876
+      },
+      {
+        "feature": "Packet Loss Rate (%)",
+        "value": 12.0,
+        "baseline": 6.2612499999999995,
+        "contribution": 0.031
+      }
+    ],
+    "model": {
+      "algorithm": "HistGradientBoosting (regressor + classifier)",
+      "r2": 0.9997,
+      "mae": 0.189,
+      "roc_auc": 0.9998,
+      "early_warning_r2": 0.641
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "backend": "sentence-transformers",
+  "dim": 384,
+  "n_cases": 100000,
+  "built_at": "2026-10-06 12:55:38",
+  "index_type": "faiss.IndexFlatIP",
+  "sparse": "BM25 (k1=1.5, b=0.75, uni+bi-grams)"
+}
